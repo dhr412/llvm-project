@@ -2882,14 +2882,6 @@ libc_support_library(
 )
 
 libc_support_library(
-    name = "__support_math_logb",
-    hdrs = ["src/__support/math/logb.h"],
-    deps = [
-        ":__support_fputil_manipulation_functions",
-    ],
-)
-
-libc_support_library(
     name = "__support_math_log",
     hdrs = ["src/__support/math/log.h"],
     deps = [
@@ -2903,6 +2895,14 @@ libc_support_library(
         ":__support_macros_properties_cpu_features",
         ":__support_math_common_constants",
         ":__support_math_log_range_reduction",
+    ],
+)
+
+libc_support_library(
+    name = "__support_math_logb",
+    hdrs = ["src/__support/math/logb.h"],
+    deps = [
+        ":__support_fputil_manipulation_functions",
     ],
 )
 
